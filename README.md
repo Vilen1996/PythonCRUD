@@ -4,8 +4,14 @@ This project is a Django application for managing courses. It includes features 
 
 Requirements
 Python 3.8 or later
-Django 5.0.7
-python-decouple
+asgiref==3.8.1
+Django==5.0.6
+pillow==10.3.0
+sqlparse==0.5.0
+psycopg2-binary==2.9.9
+django-decouple==2.1
+postmarker==1.0
+
 Setup
 1. Clone the Repository
 bash
