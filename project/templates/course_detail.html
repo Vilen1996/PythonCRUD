@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block title %}{{ course.title }}{% endblock %}
+
+{% block content %}
+  <h1>{{ course.title }}</h1>
+  <p>{{ course.description }}</p>
+  <p>Author: {{ course.author }}</p>
+  <p>Instructor: {{ course.instructor }}</p>
+  <p>Duration: {{ course.duration }} hours</p>
+  <p>Price: ${{ course.price }}</p>
+  <img src="{{ course.image.url }}" alt="{{ course.title }}">
+  <p><a href="{% url 'course_update' course.slug %}">Edit</a></p>
+  <p><a href="{% url 'course_delete' course.slug %}">Delete</a></p>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block title %}Course List{% endblock %}
+
+{% block content %}
+  <h1>Courses</h1>
+  <ul>
+    {% for course in courses %}
+      <li>
+        <a href="{% url 'course_detail' course.slug %}">{{ course.title }}</a>
+        <a href="{% url 'course_update' course.slug %}">Edit</a>
+        <a href="{% url 'course_delete' course.slug %}">Delete</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'course_create' %}">Create new course</a>
+{% endblock %}
